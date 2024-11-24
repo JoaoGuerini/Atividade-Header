@@ -2,6 +2,10 @@
 import Header from "@/components/header";
 export default function Features() {
   return (
-    <Header />
+    <>
+      <Header />
+      <h1 style={{color: "blue"}}> Features </h1>
+    </>
+    
   )
 }

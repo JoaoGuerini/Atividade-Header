@@ -40,10 +40,10 @@ export default function Header() {
                 {isMenuOpen && (
                     <motion.div
                         className={styles.ul}
-                        initial={{ right: '-30%' }} 
-                        animate={{ right: '0' }}  
+                        initial={{ right: '-40%' }} 
+                        animate={{ right: '0%' }}  
                         exit={{ left: '100%' }} 
-                        transition={{ duration: 0.1 }}
+                        transition={{ duration: 0.4 }}
                     >
                         <li className={styles.li}><Link href={'/about'}>ABOUT</Link></li>
                         <li className={styles.li}><Link href={'/features'}>FEATURES</Link></li>
