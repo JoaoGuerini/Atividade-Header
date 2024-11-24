@@ -59,9 +59,12 @@
 }
 
 .navigationMenu {
+    display: flex;
     margin-right: 5vh;
     display: block;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
 .ul {
@@ -88,7 +91,10 @@
     }
 }
 
-@media (min-width: 600px) and (max-width: 850px){
+@media (min-width: 500px) and (max-width: 850px){
+    .nav{
+        gap: 1vh;
+    }
 
     .ul {
         display: none;
@@ -109,8 +115,8 @@
     }
     
     .Image {
-        width: 70px;
-        height: 70px;
+        width: 55px;
+        height: 55px;
         margin-left: 1vh;
     }
 
