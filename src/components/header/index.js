@@ -40,7 +40,7 @@ export default function Header() {
                 {isMenuOpen && (
                     <motion.div
                         className={styles.ul}
-                        initial={{ right: '-20%' }} 
+                        initial={{ right: '-30%' }} 
                         animate={{ right: '0' }}  
                         exit={{ left: '100%' }} 
                         transition={{ duration: 0.1 }}
