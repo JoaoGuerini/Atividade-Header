@@ -1,4 +1,4 @@
-"use client"; // Adicione essa linha no topo do arquivo
+"use client";   
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -16,35 +16,16 @@ export default function Header() {
     return (
         <header className={styles.fifin}>
             <nav className={styles.nav}>
-                <Image
-                    className={styles.Image}
-                    src={'/img/file.png'}
-                    alt="Logo Png"
-                    width={100}
-                    height={100}/>
-
-                <AnimatePresence>
-                    {isMenuOpen && (
-                        <motion.div
-                            className={styles.modal}
-                            initial={{ y: "-100%", opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: "-100%", opacity: 0 }}
-                            transition={{ duration: 0.5 }}
-                        >
-                            <ul className={`${styles.ul} ${isMenuOpen ? styles.open : ''}`}>
-                                <li className={styles.li}><Link href={'/about'}>ABOUT</Link></li>
-                                <li className={styles.li}><Link href={'/features'}>FEATURES</Link></li>
-                                <li className={styles.li}><Link href={'/services'}>SERVICES</Link></li>
-                                <li className={styles.li}><Link href={'/membership'}>MEMBERSHIP</Link></li>
-                            </ul>
-                        </motion.div>
-                    )}
-                </AnimatePresence>
-
-                <div className={styles.joinNow}>
-                    joinNow
+                <div className={styles.teste}>
+                    <Image
+                        className={styles.Image}
+                        src={'/img/file.png'}
+                        alt="Logo Png"
+                        width={100}
+                        height={100}
+                    />
                 </div>
+
                 <div className={styles.navigationMenu} onClick={toggleMenu}>
                     <Image
                         src={isMenuOpen ? '/img/close.png' : '/img/menu-icon.png'}
@@ -52,9 +33,25 @@ export default function Header() {
                         width={60}
                         height={60}
                     />
-
                 </div>
             </nav>
+
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        className={styles.ul}
+                        initial={{ right: '-20%' }} 
+                        animate={{ right: '0' }}  
+                        exit={{ left: '100%' }} 
+                        transition={{ duration: 0.1 }}
+                    >
+                        <li className={styles.li}><Link href={'/about'}>ABOUT</Link></li>
+                        <li className={styles.li}><Link href={'/features'}>FEATURES</Link></li>
+                        <li className={styles.li}><Link href={'/services'}>SERVICES</Link></li>
+                        <li className={styles.li}><Link href={'/membership'}>MEMBERSHIP</Link></li>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </header>
     );
 }
