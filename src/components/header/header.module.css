@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.fifin {
+    height: 11vh;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Image {
+    margin-left: 5vh;
+}
+
+.ul {
+    display: flex;
+    list-style-type: none;
+    gap: 4vw;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    width: 60%;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+}
+
+.ul.open {
+    transform: translateX(0);
+}
+
+.li {
+    font-size: 2vh;
+    color: var(--ulFontColor);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.joinNow {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 10vw;
+    font-size: 16pt;
+    background-color: var(--joinButton);
+    color: var(--joinButtonText);
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.navigationMenu {
+    margin-right: 5vh;
+    display: block;
+    cursor: pointer;
+}
+
+.ul {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: underline;
+    text-decoration-color: var(--joinButton);
+    text-decoration-thickness: 3px;
+}
+
+.ul.open {
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media (max-width: 850px){
+    .li{
+        font-size: 1.6vh;
+        text-decoration: underline;
+        text-decoration-color: var(--joinButton);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 850px){
+
+    .ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .ul.open {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .joinNow{
+        display: none;
+        
+    }
+    
+    .Image {
+        width: 70px;
+        height: 70px;
+        margin-left: 1vh;
+    }
+
+    .navigationMenu {
+        margin-right: 1vh;
+    }
+}
