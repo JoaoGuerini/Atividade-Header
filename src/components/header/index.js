@@ -1,7 +1,7 @@
 "use client"; // Adicione essa linha no topo do arquivo
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./header.module.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -23,14 +23,15 @@ export default function Header() {
                     width={100}
                     height={100}/>
 
+                <AnimatePresence>
                     {isMenuOpen && (
                         <motion.div
                             className={styles.modal}
                             initial={{ y: "-100%", opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: "-100%", opacity: 0 }}
-                            transition={{ duration: 0.5 }}>
-                                
+                            transition={{ duration: 0.5 }}
+                        >
                             <ul className={`${styles.ul} ${isMenuOpen ? styles.open : ''}`}>
                                 <li className={styles.li}><Link href={'/about'}>ABOUT</Link></li>
                                 <li className={styles.li}><Link href={'/features'}>FEATURES</Link></li>
@@ -39,6 +40,7 @@ export default function Header() {
                             </ul>
                         </motion.div>
                     )}
+                </AnimatePresence>
 
                 <div className={styles.joinNow}>
                     joinNow
