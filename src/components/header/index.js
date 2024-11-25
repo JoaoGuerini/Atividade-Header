@@ -26,6 +26,10 @@ export default function Header() {
                     />
                 </div>
 
+                <div>
+                    <h1 className={styles.titleHeader}>GUERINI</h1>
+                </div>
+
                 <div className={styles.navigationMenu} onClick={toggleMenu}>
                     <Image
                         src={isMenuOpen ? '/img/close.png' : '/img/menu-icon.png'}
@@ -36,7 +40,7 @@ export default function Header() {
                 </div>
             </nav>
 
-            <AnimatePresence>
+             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
                         className={styles.ul}
@@ -45,7 +49,7 @@ export default function Header() {
                         exit={{ left: '100%' }} 
                         transition={{ duration: 0.4 }}
                     >
-                        <li className={styles.li}><Link href={'/about'}>ABOUT</Link></li>
+                        <li className={styles.li}><Link href={'/'}>ABOUT</Link></li>
                         <li className={styles.li}><Link href={'/features'}>FEATURES</Link></li>
                         <li className={styles.li}><Link href={'/services'}>SERVICES</Link></li>
                         <li className={styles.li}><Link href={'/membership'}>MEMBERSHIP</Link></li>

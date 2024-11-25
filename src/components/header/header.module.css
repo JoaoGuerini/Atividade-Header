@@ -1,5 +1,3 @@
-
-
 .fifin {
     height: 11vh;
     background-color: whitesmoke;
@@ -20,6 +18,13 @@
 
 .Image {
     margin-left: 5vh;
+}
+
+.titleHeader{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: large;
 }
 
 .navigationMenu {
@@ -73,16 +78,20 @@
         gap: 1vh;
     }
 
+    .titleHeader{
+        font-size: 40px;
+    }
+
     .Image {
-        width: 45px;
-        height: 45px;
+        width: 80px;
+        height: 80px;
         margin-left: 1vh;
     }
 
     .navigationMenu {
         margin-right: 1vh;
-        width: 45px;
-        height: 45px;
+        width: 80px;
+        height: 80px;
     }
 
     .ul {
